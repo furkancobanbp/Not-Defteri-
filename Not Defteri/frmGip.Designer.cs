@@ -318,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1129, 430);
+            this.ClientSize = new System.Drawing.Size(1139, 430);
             this.Controls.Add(this.btnListele);
             this.Controls.Add(this.chkBlok);
             this.Controls.Add(this.btnExcel);
