@@ -616,6 +616,7 @@
             this.Controls.Add(this.kryptonDateTimePicker1);
             this.Controls.Add(this.comboTalimatTip);
             this.Controls.Add(this.comboUevcb);
+            this.MaximizeBox = false;
             this.Name = "frmTalimat";
             this.Text = "frmTalimat";
             ((System.ComponentModel.ISupportInitialize)(this.comboUevcb)).EndInit();
