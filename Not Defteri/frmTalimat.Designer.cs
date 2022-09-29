@@ -33,16 +33,16 @@
             this.kryptonDateTimePicker1 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.numSaat = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtBirakilanTalimatMiktar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtTalimatFiyat = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtPTF = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSMF = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox5 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtGelenTalimatMiktar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtBlokTalimatMiktar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtGerTalFiyat = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txtGipTalimatMiktar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtGipTalimatTutar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.btnTalimatKaydet = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +61,7 @@
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtTeslimEdilenTalimatMiktar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.talimat_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.santralAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +73,22 @@
             this.btnSantraleGoreAra = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnYoneGoreAra = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnExcel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel12 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel13 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel14 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel15 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel16 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtKgup = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtEak = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtRevizeEak = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.comboUevcb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboTalimatTip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
@@ -83,7 +99,7 @@
             this.comboUevcb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboUevcb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.comboUevcb.DropDownWidth = 158;
-            this.comboUevcb.Location = new System.Drawing.Point(12, 12);
+            this.comboUevcb.Location = new System.Drawing.Point(104, 16);
             this.comboUevcb.Name = "comboUevcb";
             this.comboUevcb.Size = new System.Drawing.Size(158, 21);
             this.comboUevcb.TabIndex = 0;
@@ -92,7 +108,7 @@
             // comboTalimatTip
             // 
             this.comboTalimatTip.DropDownWidth = 158;
-            this.comboTalimatTip.Location = new System.Drawing.Point(12, 39);
+            this.comboTalimatTip.Location = new System.Drawing.Point(104, 43);
             this.comboTalimatTip.Name = "comboTalimatTip";
             this.comboTalimatTip.Size = new System.Drawing.Size(158, 21);
             this.comboTalimatTip.TabIndex = 1;
@@ -101,7 +117,7 @@
             // kryptonDateTimePicker1
             // 
             this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(12, 66);
+            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(104, 70);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
             this.kryptonDateTimePicker1.Size = new System.Drawing.Size(158, 21);
             this.kryptonDateTimePicker1.TabIndex = 2;
@@ -109,35 +125,35 @@
             // numSaat
             // 
             this.numSaat.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.numSaat.Location = new System.Drawing.Point(55, 93);
+            this.numSaat.Location = new System.Drawing.Point(104, 97);
             this.numSaat.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
             this.numSaat.Name = "numSaat";
-            this.numSaat.Size = new System.Drawing.Size(115, 22);
+            this.numSaat.Size = new System.Drawing.Size(158, 22);
             this.numSaat.TabIndex = 3;
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(12, 95);
+            this.kryptonLabel1.Location = new System.Drawing.Point(61, 96);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(37, 20);
             this.kryptonLabel1.TabIndex = 4;
             this.kryptonLabel1.Values.Text = "Saat:";
             // 
-            // kryptonTextBox1
+            // txtBirakilanTalimatMiktar
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(176, 12);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(158, 23);
-            this.kryptonTextBox1.TabIndex = 5;
-            this.kryptonTextBox1.Text = "Bırakılan Talimat Miktarı";
+            this.txtBirakilanTalimatMiktar.Location = new System.Drawing.Point(371, 16);
+            this.txtBirakilanTalimatMiktar.Name = "txtBirakilanTalimatMiktar";
+            this.txtBirakilanTalimatMiktar.Size = new System.Drawing.Size(158, 23);
+            this.txtBirakilanTalimatMiktar.TabIndex = 5;
+            this.txtBirakilanTalimatMiktar.Text = "Bırakılan Talimat Miktarı";
             // 
             // txtTalimatFiyat
             // 
-            this.txtTalimatFiyat.Location = new System.Drawing.Point(12, 150);
+            this.txtTalimatFiyat.Location = new System.Drawing.Point(104, 154);
             this.txtTalimatFiyat.Name = "txtTalimatFiyat";
             this.txtTalimatFiyat.Size = new System.Drawing.Size(158, 23);
             this.txtTalimatFiyat.TabIndex = 6;
@@ -145,7 +161,7 @@
             // 
             // txtPTF
             // 
-            this.txtPTF.Location = new System.Drawing.Point(12, 121);
+            this.txtPTF.Location = new System.Drawing.Point(104, 125);
             this.txtPTF.Name = "txtPTF";
             this.txtPTF.Size = new System.Drawing.Size(72, 23);
             this.txtPTF.TabIndex = 7;
@@ -153,59 +169,59 @@
             // 
             // txtSMF
             // 
-            this.txtSMF.Location = new System.Drawing.Point(90, 121);
+            this.txtSMF.Location = new System.Drawing.Point(182, 125);
             this.txtSMF.Name = "txtSMF";
             this.txtSMF.Size = new System.Drawing.Size(80, 23);
             this.txtSMF.TabIndex = 8;
             this.txtSMF.Text = "SMF";
             // 
-            // kryptonTextBox5
+            // txtGelenTalimatMiktar
             // 
-            this.kryptonTextBox5.Location = new System.Drawing.Point(176, 41);
-            this.kryptonTextBox5.Name = "kryptonTextBox5";
-            this.kryptonTextBox5.Size = new System.Drawing.Size(158, 23);
-            this.kryptonTextBox5.TabIndex = 9;
-            this.kryptonTextBox5.Text = "Gelen Talimat Miktarı";
+            this.txtGelenTalimatMiktar.Location = new System.Drawing.Point(371, 45);
+            this.txtGelenTalimatMiktar.Name = "txtGelenTalimatMiktar";
+            this.txtGelenTalimatMiktar.Size = new System.Drawing.Size(158, 23);
+            this.txtGelenTalimatMiktar.TabIndex = 9;
+            this.txtGelenTalimatMiktar.Text = "Gelen Talimat Miktarı";
             // 
-            // kryptonTextBox6
+            // txtBlokTalimatMiktar
             // 
-            this.kryptonTextBox6.Location = new System.Drawing.Point(176, 121);
-            this.kryptonTextBox6.Name = "kryptonTextBox6";
-            this.kryptonTextBox6.Size = new System.Drawing.Size(158, 23);
-            this.kryptonTextBox6.TabIndex = 10;
-            this.kryptonTextBox6.Text = "Blok Yapılan Talimat Miktarı";
+            this.txtBlokTalimatMiktar.Location = new System.Drawing.Point(371, 125);
+            this.txtBlokTalimatMiktar.Name = "txtBlokTalimatMiktar";
+            this.txtBlokTalimatMiktar.Size = new System.Drawing.Size(158, 23);
+            this.txtBlokTalimatMiktar.TabIndex = 10;
+            this.txtBlokTalimatMiktar.Text = "Blok Yapılan Talimat Miktarı";
             // 
             // txtGerTalFiyat
             // 
-            this.txtGerTalFiyat.Location = new System.Drawing.Point(12, 179);
+            this.txtGerTalFiyat.Location = new System.Drawing.Point(104, 186);
             this.txtGerTalFiyat.Name = "txtGerTalFiyat";
             this.txtGerTalFiyat.Size = new System.Drawing.Size(158, 23);
             this.txtGerTalFiyat.TabIndex = 11;
             this.txtGerTalFiyat.Text = "Gerçekleşen Talimat Fiyatı";
             // 
-            // kryptonTextBox2
+            // txtGipTalimatMiktar
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(176, 150);
-            this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.Size = new System.Drawing.Size(158, 23);
-            this.kryptonTextBox2.TabIndex = 12;
-            this.kryptonTextBox2.Text = "GİP Yapılan Talimat Miktarı";
+            this.txtGipTalimatMiktar.Location = new System.Drawing.Point(371, 154);
+            this.txtGipTalimatMiktar.Name = "txtGipTalimatMiktar";
+            this.txtGipTalimatMiktar.Size = new System.Drawing.Size(158, 23);
+            this.txtGipTalimatMiktar.TabIndex = 12;
+            this.txtGipTalimatMiktar.Text = "GİP Yapılan Talimat Miktarı";
             // 
-            // kryptonTextBox3
+            // txtGipTalimatTutar
             // 
-            this.kryptonTextBox3.Location = new System.Drawing.Point(176, 179);
-            this.kryptonTextBox3.Name = "kryptonTextBox3";
-            this.kryptonTextBox3.Size = new System.Drawing.Size(158, 23);
-            this.kryptonTextBox3.TabIndex = 13;
-            this.kryptonTextBox3.Text = "GİP Yapılan Talimat Tutarı";
+            this.txtGipTalimatTutar.Location = new System.Drawing.Point(371, 183);
+            this.txtGipTalimatTutar.Name = "txtGipTalimatTutar";
+            this.txtGipTalimatTutar.Size = new System.Drawing.Size(158, 23);
+            this.txtGipTalimatTutar.TabIndex = 13;
+            this.txtGipTalimatTutar.Text = "GİP Yapılan Talimat Tutarı";
             // 
-            // kryptonButton1
+            // btnTalimatKaydet
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(12, 208);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(322, 45);
-            this.kryptonButton1.TabIndex = 14;
-            this.kryptonButton1.Values.Text = "Talimatı Kaydet";
+            this.btnTalimatKaydet.Location = new System.Drawing.Point(110, 241);
+            this.btnTalimatKaydet.Name = "btnTalimatKaydet";
+            this.btnTalimatKaydet.Size = new System.Drawing.Size(419, 37);
+            this.btnTalimatKaydet.TabIndex = 14;
+            this.btnTalimatKaydet.Values.Text = "Talimatı Kaydet";
             // 
             // kryptonDataGridView1
             // 
@@ -229,10 +245,10 @@
             this.Column16,
             this.Column17,
             this.Column18});
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(12, 259);
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(12, 284);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.RowTemplate.Height = 25;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(794, 354);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(794, 329);
             this.kryptonDataGridView1.TabIndex = 15;
             // 
             // Column2
@@ -336,13 +352,13 @@
             this.Column18.HeaderText = "Güncellenen EAK";
             this.Column18.Name = "Column18";
             // 
-            // kryptonTextBox4
+            // txtTeslimEdilenTalimatMiktar
             // 
-            this.kryptonTextBox4.Location = new System.Drawing.Point(176, 70);
-            this.kryptonTextBox4.Name = "kryptonTextBox4";
-            this.kryptonTextBox4.Size = new System.Drawing.Size(158, 23);
-            this.kryptonTextBox4.TabIndex = 16;
-            this.kryptonTextBox4.Text = "Teslim Edilen Talimat Miktarı";
+            this.txtTeslimEdilenTalimatMiktar.Location = new System.Drawing.Point(371, 74);
+            this.txtTeslimEdilenTalimatMiktar.Name = "txtTeslimEdilenTalimatMiktar";
+            this.txtTeslimEdilenTalimatMiktar.Size = new System.Drawing.Size(158, 23);
+            this.txtTeslimEdilenTalimatMiktar.TabIndex = 16;
+            this.txtTeslimEdilenTalimatMiktar.Text = "Teslim Edilen Talimat Miktarı";
             // 
             // talimat_id
             // 
@@ -365,14 +381,14 @@
             // dateBasTar
             // 
             this.dateBasTar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateBasTar.Location = new System.Drawing.Point(443, 11);
+            this.dateBasTar.Location = new System.Drawing.Point(638, 15);
             this.dateBasTar.Name = "dateBasTar";
             this.dateBasTar.Size = new System.Drawing.Size(158, 21);
             this.dateBasTar.TabIndex = 17;
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(340, 12);
+            this.kryptonLabel2.Location = new System.Drawing.Point(535, 16);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(97, 20);
             this.kryptonLabel2.TabIndex = 18;
@@ -380,7 +396,7 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(368, 41);
+            this.kryptonLabel3.Location = new System.Drawing.Point(563, 45);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(69, 20);
             this.kryptonLabel3.TabIndex = 20;
@@ -389,14 +405,14 @@
             // dateBitTar
             // 
             this.dateBitTar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateBitTar.Location = new System.Drawing.Point(443, 39);
+            this.dateBitTar.Location = new System.Drawing.Point(638, 43);
             this.dateBitTar.Name = "dateBitTar";
             this.dateBitTar.Size = new System.Drawing.Size(158, 21);
             this.dateBitTar.TabIndex = 19;
             // 
             // btnTariheGoreAra
             // 
-            this.btnTariheGoreAra.Location = new System.Drawing.Point(443, 64);
+            this.btnTariheGoreAra.Location = new System.Drawing.Point(638, 68);
             this.btnTariheGoreAra.Name = "btnTariheGoreAra";
             this.btnTariheGoreAra.Size = new System.Drawing.Size(158, 29);
             this.btnTariheGoreAra.TabIndex = 21;
@@ -404,7 +420,7 @@
             // 
             // btnSantraleGoreAra
             // 
-            this.btnSantraleGoreAra.Location = new System.Drawing.Point(443, 99);
+            this.btnSantraleGoreAra.Location = new System.Drawing.Point(638, 103);
             this.btnSantraleGoreAra.Name = "btnSantraleGoreAra";
             this.btnSantraleGoreAra.Size = new System.Drawing.Size(158, 29);
             this.btnSantraleGoreAra.TabIndex = 22;
@@ -412,7 +428,7 @@
             // 
             // btnYoneGoreAra
             // 
-            this.btnYoneGoreAra.Location = new System.Drawing.Point(443, 134);
+            this.btnYoneGoreAra.Location = new System.Drawing.Point(638, 138);
             this.btnYoneGoreAra.Name = "btnYoneGoreAra";
             this.btnYoneGoreAra.Size = new System.Drawing.Size(158, 29);
             this.btnYoneGoreAra.TabIndex = 23;
@@ -420,17 +436,161 @@
             // 
             // btnExcel
             // 
-            this.btnExcel.Location = new System.Drawing.Point(443, 169);
+            this.btnExcel.Location = new System.Drawing.Point(638, 173);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(158, 29);
             this.btnExcel.TabIndex = 24;
             this.btnExcel.Values.Text = "Tabloyu Excel\'e Aktar";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(268, 19);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(103, 20);
+            this.kryptonLabel4.TabIndex = 25;
+            this.kryptonLabel4.Values.Text = "Bırakılan Talimat:";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(282, 45);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(83, 20);
+            this.kryptonLabel5.TabIndex = 26;
+            this.kryptonLabel5.Values.Text = "Gelen Miktar:";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(281, 77);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(84, 20);
+            this.kryptonLabel6.TabIndex = 27;
+            this.kryptonLabel6.Values.Text = "Teslim Edilen:";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(290, 128);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(75, 20);
+            this.kryptonLabel7.TabIndex = 28;
+            this.kryptonLabel7.Values.Text = "Blok Miktar:";
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(295, 157);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(70, 20);
+            this.kryptonLabel8.TabIndex = 29;
+            this.kryptonLabel8.Values.Text = "GİP Miktar:";
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(302, 186);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(63, 20);
+            this.kryptonLabel9.TabIndex = 30;
+            this.kryptonLabel9.Values.Text = "GİP Tutar:";
+            // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Location = new System.Drawing.Point(48, 15);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(50, 20);
+            this.kryptonLabel10.TabIndex = 31;
+            this.kryptonLabel10.Values.Text = "UEVCB:";
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Location = new System.Drawing.Point(48, 39);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(50, 20);
+            this.kryptonLabel11.TabIndex = 32;
+            this.kryptonLabel11.Values.Text = "UEVCB:";
+            // 
+            // kryptonLabel12
+            // 
+            this.kryptonLabel12.Location = new System.Drawing.Point(48, 71);
+            this.kryptonLabel12.Name = "kryptonLabel12";
+            this.kryptonLabel12.Size = new System.Drawing.Size(50, 20);
+            this.kryptonLabel12.TabIndex = 33;
+            this.kryptonLabel12.Values.Text = "UEVCB:";
+            // 
+            // kryptonLabel13
+            // 
+            this.kryptonLabel13.Location = new System.Drawing.Point(37, 125);
+            this.kryptonLabel13.Name = "kryptonLabel13";
+            this.kryptonLabel13.Size = new System.Drawing.Size(61, 20);
+            this.kryptonLabel13.TabIndex = 34;
+            this.kryptonLabel13.Values.Text = "PTF/SMF:";
+            // 
+            // kryptonLabel14
+            // 
+            this.kryptonLabel14.Location = new System.Drawing.Point(16, 154);
+            this.kryptonLabel14.Name = "kryptonLabel14";
+            this.kryptonLabel14.Size = new System.Drawing.Size(82, 20);
+            this.kryptonLabel14.TabIndex = 35;
+            this.kryptonLabel14.Values.Text = "Talimat Fiyat:";
+            // 
+            // kryptonLabel15
+            // 
+            this.kryptonLabel15.Location = new System.Drawing.Point(1, 186);
+            this.kryptonLabel15.Name = "kryptonLabel15";
+            this.kryptonLabel15.Size = new System.Drawing.Size(97, 20);
+            this.kryptonLabel15.TabIndex = 36;
+            this.kryptonLabel15.Values.Text = "Gerçekleş. Fiyat:";
+            // 
+            // kryptonLabel16
+            // 
+            this.kryptonLabel16.Location = new System.Drawing.Point(1, 215);
+            this.kryptonLabel16.Name = "kryptonLabel16";
+            this.kryptonLabel16.Size = new System.Drawing.Size(110, 20);
+            this.kryptonLabel16.TabIndex = 39;
+            this.kryptonLabel16.Values.Text = "EAK/KGÜP/Revize:";
+            // 
+            // txtKgup
+            // 
+            this.txtKgup.Location = new System.Drawing.Point(268, 212);
+            this.txtKgup.Name = "txtKgup";
+            this.txtKgup.Size = new System.Drawing.Size(145, 23);
+            this.txtKgup.TabIndex = 38;
+            this.txtKgup.Text = "KGÜP";
+            // 
+            // txtEak
+            // 
+            this.txtEak.Location = new System.Drawing.Point(117, 212);
+            this.txtEak.Name = "txtEak";
+            this.txtEak.Size = new System.Drawing.Size(145, 23);
+            this.txtEak.TabIndex = 37;
+            this.txtEak.Text = "EAK";
+            // 
+            // txtRevizeEak
+            // 
+            this.txtRevizeEak.Location = new System.Drawing.Point(419, 212);
+            this.txtRevizeEak.Name = "txtRevizeEak";
+            this.txtRevizeEak.Size = new System.Drawing.Size(110, 23);
+            this.txtRevizeEak.TabIndex = 40;
+            this.txtRevizeEak.Text = "G.EAK";
             // 
             // frmTalimat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 625);
+            this.Controls.Add(this.txtRevizeEak);
+            this.Controls.Add(this.kryptonLabel16);
+            this.Controls.Add(this.txtKgup);
+            this.Controls.Add(this.txtEak);
+            this.Controls.Add(this.kryptonLabel15);
+            this.Controls.Add(this.kryptonLabel14);
+            this.Controls.Add(this.kryptonLabel13);
+            this.Controls.Add(this.kryptonLabel12);
+            this.Controls.Add(this.kryptonLabel11);
+            this.Controls.Add(this.kryptonLabel10);
+            this.Controls.Add(this.kryptonLabel9);
+            this.Controls.Add(this.kryptonLabel8);
+            this.Controls.Add(this.kryptonLabel7);
+            this.Controls.Add(this.kryptonLabel6);
+            this.Controls.Add(this.kryptonLabel5);
+            this.Controls.Add(this.kryptonLabel4);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.btnYoneGoreAra);
             this.Controls.Add(this.btnSantraleGoreAra);
@@ -439,18 +599,18 @@
             this.Controls.Add(this.dateBitTar);
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.dateBasTar);
-            this.Controls.Add(this.kryptonTextBox4);
+            this.Controls.Add(this.txtTeslimEdilenTalimatMiktar);
             this.Controls.Add(this.kryptonDataGridView1);
-            this.Controls.Add(this.kryptonButton1);
-            this.Controls.Add(this.kryptonTextBox3);
-            this.Controls.Add(this.kryptonTextBox2);
+            this.Controls.Add(this.btnTalimatKaydet);
+            this.Controls.Add(this.txtGipTalimatTutar);
+            this.Controls.Add(this.txtGipTalimatMiktar);
             this.Controls.Add(this.txtGerTalFiyat);
-            this.Controls.Add(this.kryptonTextBox6);
-            this.Controls.Add(this.kryptonTextBox5);
+            this.Controls.Add(this.txtBlokTalimatMiktar);
+            this.Controls.Add(this.txtGelenTalimatMiktar);
             this.Controls.Add(this.txtSMF);
             this.Controls.Add(this.txtPTF);
             this.Controls.Add(this.txtTalimatFiyat);
-            this.Controls.Add(this.kryptonTextBox1);
+            this.Controls.Add(this.txtBirakilanTalimatMiktar);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.numSaat);
             this.Controls.Add(this.kryptonDateTimePicker1);
@@ -473,18 +633,18 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker kryptonDateTimePicker1;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown numSaat;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtBirakilanTalimatMiktar;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTalimatFiyat;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPTF;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSMF;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtGelenTalimatMiktar;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtBlokTalimatMiktar;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtGerTalFiyat;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtGipTalimatMiktar;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtGipTalimatTutar;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnTalimatKaydet;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTeslimEdilenTalimatMiktar;
         private DataGridViewTextBoxColumn talimat_id;
         private DataGridViewTextBoxColumn santralAdi;
         private DataGridViewTextBoxColumn Column1;
@@ -513,5 +673,21 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSantraleGoreAra;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnYoneGoreAra;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnExcel;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel8;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel9;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel10;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel11;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel12;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel13;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel14;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel15;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel16;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtKgup;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtEak;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtRevizeEak;
     }
 }
