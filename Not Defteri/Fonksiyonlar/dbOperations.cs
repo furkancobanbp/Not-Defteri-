@@ -58,7 +58,7 @@ namespace Not_Defteri.Fonksiyonlar
             con.Close();
             return results;
         }
-        public List<clsSantral> santralBilgisiAl(int id)
+        public List<clsSantral> santralBilgisiAl(int? id)
         {          
             String query = " where sirket_id = " + id + "";
             if (id == null)
@@ -88,8 +88,42 @@ namespace Not_Defteri.Fonksiyonlar
                     " where s.sirket_id = g.sirket_id" +
                     " and u.santral_id = g.santral_id";
             con.Open();
-            results = con.Query<clsGipView>(sql).ToList();           
+            results = con.Query<clsGipView>(sql).ToList();
+            con.Close();
             return results;
+        }
+        public List<clsTalimatYonu> talimatYonBilgi()
+        {
+            var results = new List<clsTalimatYonu>();
+            var sql = "select * from tblTalimatYonu";
+            con.Open();
+            results = con.Query<clsTalimatYonu>(sql).ToList();
+            con.Close();
+            return results;
+
+        }
+        public async void talimatKayit(clsTalimatlar talimatKayit)
+        {
+            var sql = "insert into tblTalimatlar(santral_id, talimatYon_id, talimatTarih, talimatSaat, birakilanTalimat, talimatMiktar, " +
+                "talimatFiyat, teslimEdilenTalimat, blokYapilanTalimat, gipYapilanTalimatMiktar, gipTalimatTutar, PTF, SMF, EAK, KGÜP, guncellenenEak)" +
+                " values(@santral_id, @talimatYon_id, @talimatTarih, @talimatSaat, @birakilanTalimat, @talimatMiktar, " +
+                "@talimatFiyat, @teslimEdilenTalimat, @blokYapilanTalimat, @gipYapilanTalimatMiktar, @gipTalimatTutar, @PTF, @SMF, @EAK, @KGÜP, @guncellenenEak)";
+            con.Open();
+            con.ExecuteAsync(sql, talimatKayit);
+            con.Close();
+        }
+        public List<clsTalimatBilgi> talimatTablo()
+        {
+            var results = new List<clsTalimatBilgi>();
+            var sql = "select t.talimat_id, s.santralAdi, y.talimatAd, t.talimatTarih, t.talimatSaat, t.birakilanTalimat, t.talimatMiktar, t.talimatFiyat, y.talimatAd, " +
+                        "t.teslimEdilenTalimat, t.blokYapilanTalimat, t.gipYapilanTalimatMiktar, t.gipTalimatTutar, t.PTF, t.SMF, t.EAK, t.KGÜP, t.guncellenenEak " +
+                        "from tblTalimatlar t, tblSantral s, tblTalimatYonu y " +
+                        "where t.talimatYon_id = y.talimatYon_id and t.santral_id = s.santral_id order by t.talimatTarih";
+            con.Open();
+            results = con.Query<clsTalimatBilgi>(sql).ToList();
+            con.Close();
+            return results;
+
         }
 
     }

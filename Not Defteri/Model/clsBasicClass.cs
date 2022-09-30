@@ -16,5 +16,11 @@ namespace Not_Defteri.Model
         public int santral_id { get; set; }
         public int sirket_id { get; set; }
         public String santralAdi { get; set; }
+    }   
+    public class clsTalimatYonu
+    {
+        public int talimatYon_id { get; set; }
+        public String talimatAd { get; set; }
+        public int talimatKod { get; set; }
     }
 }

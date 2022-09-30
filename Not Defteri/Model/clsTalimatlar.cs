@@ -10,11 +10,11 @@ namespace Not_Defteri.Model
     {
         public int talimat_id { get; set; }
         public int santral_id { get; set; }
-        public int santralYon_id { get; set; }
-        public DateTime talimatTarih { get; set; }
+        public int talimatYon_id { get; set; }
+        public DateTime? talimatTarih { get; set; }
         public int talimatSaat { get; set; }
-        public decimal birakilanTalimatMiktar { get; set; }
-        public decimal gelenTalimatMiktar { get; set; }
+        public decimal birakilanTalimat { get; set; }       
+        public decimal talimatMiktar { get; set; }
         public decimal talimatFiyat { get; set; }
         public decimal teslimEdilenTalimat { get; set; }    
         public decimal blokYapilanTalimat { get; set; }
@@ -30,7 +30,7 @@ namespace Not_Defteri.Model
     {
         public int talimat_id { get; set; }
         public String santralAdi { get; set; }
-        public String talimatYon { get; set; }
+        public String talimatAd { get; set; }
         public DateTime talimatTarih { get; set; }
         public int talimatSaat { get; set; }
         public decimal birakilanTalimatMiktar { get; set; }
