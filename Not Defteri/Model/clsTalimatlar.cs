@@ -23,7 +23,7 @@ namespace Not_Defteri.Model
         public decimal PTF { get; set; }
         public decimal SMF { get; set; }
         public decimal EAK { get; set; }
-        public decimal KGÜP { get; set; }
+        public decimal KGUP { get; set; }
         public decimal guncellenenEak { get; set; }
     }
     public class clsTalimatBilgi
@@ -43,7 +43,7 @@ namespace Not_Defteri.Model
         public decimal PTF { get; set; }
         public decimal SMF { get; set; }
         public decimal EAK { get; set; }
-        public decimal KGÜP { get; set; }
+        public decimal KGUP { get; set; }
         public decimal guncellenenEak { get; set; }
     }
 }

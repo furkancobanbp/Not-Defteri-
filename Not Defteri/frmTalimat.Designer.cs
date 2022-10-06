@@ -36,24 +36,6 @@
             this.txtPTF = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSMF = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnTalimatKaydet = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.talimat_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.santralAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,6 +70,24 @@
             this.txtGipTalimatMiktar = new System.Windows.Forms.MaskedTextBox();
             this.txtBlokTalimatMiktar = new System.Windows.Forms.MaskedTextBox();
             this.btnTumunuListele = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.talimatid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.talimatAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.talimatTarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.talimatSaat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birakilanTalimatMiktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gelenTalimatMiktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.talimatFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teslimEdilenTalimat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.blokYapilanTalimat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gipYapilanTalimatMiktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gipTalimatTutar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PTF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SMF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EAK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KGUP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guncellenenEak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.comboUevcb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboTalimatTip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
@@ -119,6 +119,7 @@
             // 
             // dateTalimatTarihi
             // 
+            this.dateTalimatTarihi.CustomFormat = "yyyy-MM-dd";
             this.dateTalimatTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTalimatTarihi.Location = new System.Drawing.Point(104, 70);
             this.dateTalimatTarihi.Name = "dateTalimatTarihi";
@@ -172,157 +173,6 @@
             this.btnTalimatKaydet.Values.Text = "Talimatı Kaydet";
             this.btnTalimatKaydet.Click += new System.EventHandler(this.btnTalimatKaydet_Click);
             // 
-            // kryptonDataGridView1
-            // 
-            this.kryptonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.kryptonDataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column17,
-            this.Column18});
-            this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 296);
-            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.ReadOnly = true;
-            this.kryptonDataGridView1.RowTemplate.Height = 25;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(818, 329);
-            this.kryptonDataGridView1.TabIndex = 15;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "talimat_id";
-            this.Column2.HeaderText = "talimat_id";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "santralAdi";
-            this.Column3.HeaderText = "Santral Adı";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "talimatAd";
-            this.Column4.HeaderText = "Talimat Tip";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "talimatTarih";
-            this.Column5.HeaderText = "Talimat Tarihi";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "talimatSaat";
-            this.Column6.HeaderText = "Talimat Saati";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "birakilanTalimatMiktar";
-            this.Column7.HeaderText = "Bırakılan Talimat Miktarı";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "gelenTalimatMiktar";
-            this.Column8.HeaderText = "Gelen Talimat Miktarı";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "talimatFiyat";
-            this.Column9.HeaderText = "Talimat Fiyatı";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "teslimEdilenTalimat";
-            this.Column10.HeaderText = "Teslim Edilen Talimat Miktarı";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "blokYapilanTalimat";
-            this.Column11.HeaderText = "Blok Yapılan Talimat Miktarı";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "gipYapilanTalimatMiktar";
-            this.Column12.HeaderText = "Gip Yapılan Talimat Miktarı";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.DataPropertyName = "gipTalimatTutar";
-            this.Column13.HeaderText = "Gip Talimat Tutarı";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.DataPropertyName = "PTF";
-            this.Column14.HeaderText = "PTF";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Column15
-            // 
-            this.Column15.DataPropertyName = "SMF";
-            this.Column15.HeaderText = "SMF";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            // 
-            // Column16
-            // 
-            this.Column16.DataPropertyName = "EAK";
-            this.Column16.HeaderText = "EAK";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            // 
-            // Column17
-            // 
-            this.Column17.DataPropertyName = "KGÜP";
-            this.Column17.HeaderText = "KGÜP";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            // 
-            // Column18
-            // 
-            this.Column18.DataPropertyName = "guncellenenEak";
-            this.Column18.HeaderText = "Güncellenen EAK";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            // 
             // talimat_id
             // 
             this.talimat_id.HeaderText = "Column1";
@@ -343,6 +193,7 @@
             // 
             // dateBasTar
             // 
+            this.dateBasTar.CustomFormat = "yyyy-MM-dd";
             this.dateBasTar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateBasTar.Location = new System.Drawing.Point(638, 15);
             this.dateBasTar.Name = "dateBasTar";
@@ -367,6 +218,7 @@
             // 
             // dateBitTar
             // 
+            this.dateBitTar.CustomFormat = "yyyy-MM-dd";
             this.dateBitTar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateBitTar.Location = new System.Drawing.Point(638, 43);
             this.dateBitTar.Name = "dateBitTar";
@@ -380,6 +232,7 @@
             this.btnTariheGoreAra.Size = new System.Drawing.Size(158, 29);
             this.btnTariheGoreAra.TabIndex = 21;
             this.btnTariheGoreAra.Values.Text = "Tarihe Göre Ara";
+            this.btnTariheGoreAra.Click += new System.EventHandler(this.btnTariheGoreAra_Click);
             // 
             // btnSantraleGoreAra
             // 
@@ -388,6 +241,7 @@
             this.btnSantraleGoreAra.Size = new System.Drawing.Size(158, 29);
             this.btnSantraleGoreAra.TabIndex = 22;
             this.btnSantraleGoreAra.Values.Text = "Santrale Göre Ara";
+            this.btnSantraleGoreAra.Click += new System.EventHandler(this.btnSantraleGoreAra_Click);
             // 
             // btnYoneGoreAra
             // 
@@ -396,6 +250,7 @@
             this.btnYoneGoreAra.Size = new System.Drawing.Size(158, 29);
             this.btnYoneGoreAra.TabIndex = 23;
             this.btnYoneGoreAra.Values.Text = "Talimat Yönüne Göre Ara";
+            this.btnYoneGoreAra.Click += new System.EventHandler(this.btnYoneGoreAra_Click);
             // 
             // btnExcel
             // 
@@ -404,6 +259,7 @@
             this.btnExcel.Size = new System.Drawing.Size(158, 29);
             this.btnExcel.TabIndex = 24;
             this.btnExcel.Values.Text = "Tabloyu Excel\'e Aktar";
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // kryptonLabel4
             // 
@@ -581,11 +437,144 @@
             this.btnTumunuListele.Values.Text = "Tümünü Listele";
             this.btnTumunuListele.Click += new System.EventHandler(this.btnTumunuListele_Click);
             // 
+            // kryptonDataGridView1
+            // 
+            this.kryptonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.talimatid,
+            this.dataGridViewTextBoxColumn2,
+            this.talimatAd,
+            this.talimatTarih,
+            this.talimatSaat,
+            this.birakilanTalimatMiktar,
+            this.gelenTalimatMiktar,
+            this.talimatFiyat,
+            this.teslimEdilenTalimat,
+            this.blokYapilanTalimat,
+            this.gipYapilanTalimatMiktar,
+            this.gipTalimatTutar,
+            this.PTF,
+            this.SMF,
+            this.EAK,
+            this.KGUP,
+            this.guncellenenEak});
+            this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 365);
+            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
+            this.kryptonDataGridView1.RowTemplate.Height = 25;
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(818, 260);
+            this.kryptonDataGridView1.TabIndex = 62;
+            // 
+            // talimatid
+            // 
+            this.talimatid.DataPropertyName = "talimat_id";
+            this.talimatid.HeaderText = "talimat_id";
+            this.talimatid.Name = "talimatid";
+            this.talimatid.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "santralAdi";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Santral Adı";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // talimatAd
+            // 
+            this.talimatAd.DataPropertyName = "talimatAd";
+            this.talimatAd.HeaderText = "Talimat Adı";
+            this.talimatAd.Name = "talimatAd";
+            // 
+            // talimatTarih
+            // 
+            this.talimatTarih.DataPropertyName = "talimatTarih";
+            this.talimatTarih.HeaderText = "Talimat Tarihi";
+            this.talimatTarih.Name = "talimatTarih";
+            // 
+            // talimatSaat
+            // 
+            this.talimatSaat.DataPropertyName = "talimatSaat";
+            this.talimatSaat.HeaderText = "Talimat Saati";
+            this.talimatSaat.Name = "talimatSaat";
+            // 
+            // birakilanTalimatMiktar
+            // 
+            this.birakilanTalimatMiktar.DataPropertyName = "birakilanTalimatMiktar";
+            this.birakilanTalimatMiktar.HeaderText = "Bırakılan Talimat Miktarı";
+            this.birakilanTalimatMiktar.Name = "birakilanTalimatMiktar";
+            // 
+            // gelenTalimatMiktar
+            // 
+            this.gelenTalimatMiktar.DataPropertyName = "gelenTalimatMiktar";
+            this.gelenTalimatMiktar.HeaderText = "Gelen Talimat Miktar";
+            this.gelenTalimatMiktar.Name = "gelenTalimatMiktar";
+            // 
+            // talimatFiyat
+            // 
+            this.talimatFiyat.DataPropertyName = "talimatFiyat";
+            this.talimatFiyat.HeaderText = "Talimat Fiyatı";
+            this.talimatFiyat.Name = "talimatFiyat";
+            // 
+            // teslimEdilenTalimat
+            // 
+            this.teslimEdilenTalimat.DataPropertyName = "teslimEdilenTalimat";
+            this.teslimEdilenTalimat.HeaderText = "Teslim Edilen Talimat";
+            this.teslimEdilenTalimat.Name = "teslimEdilenTalimat";
+            // 
+            // blokYapilanTalimat
+            // 
+            this.blokYapilanTalimat.DataPropertyName = "blokYapilanTalimat";
+            this.blokYapilanTalimat.HeaderText = "Blok Yapılan Talimat";
+            this.blokYapilanTalimat.Name = "blokYapilanTalimat";
+            // 
+            // gipYapilanTalimatMiktar
+            // 
+            this.gipYapilanTalimatMiktar.DataPropertyName = "gipYapilanTalimatMiktar";
+            this.gipYapilanTalimatMiktar.HeaderText = "Gip Yapılan Talimat Miktar";
+            this.gipYapilanTalimatMiktar.Name = "gipYapilanTalimatMiktar";
+            // 
+            // gipTalimatTutar
+            // 
+            this.gipTalimatTutar.DataPropertyName = "gipTalimatTutar";
+            this.gipTalimatTutar.HeaderText = "Gip Talimat Tutarı";
+            this.gipTalimatTutar.Name = "gipTalimatTutar";
+            // 
+            // PTF
+            // 
+            this.PTF.DataPropertyName = "PTF";
+            this.PTF.HeaderText = "PTF";
+            this.PTF.Name = "PTF";
+            // 
+            // SMF
+            // 
+            this.SMF.DataPropertyName = "SMF";
+            this.SMF.HeaderText = "SMF";
+            this.SMF.Name = "SMF";
+            // 
+            // EAK
+            // 
+            this.EAK.DataPropertyName = "EAK";
+            this.EAK.HeaderText = "EAK";
+            this.EAK.Name = "EAK";
+            // 
+            // KGUP
+            // 
+            this.KGUP.DataPropertyName = "KGUP";
+            this.KGUP.HeaderText = "KGÜP";
+            this.KGUP.Name = "KGUP";
+            // 
+            // guncellenenEak
+            // 
+            this.guncellenenEak.DataPropertyName = "guncellenenEak";
+            this.guncellenenEak.HeaderText = "Güncellenen EAK";
+            this.guncellenenEak.Name = "guncellenenEak";
+            // 
             // frmTalimat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 625);
+            this.Controls.Add(this.kryptonDataGridView1);
             this.Controls.Add(this.btnTumunuListele);
             this.Controls.Add(this.txtGipTalimatTutar);
             this.Controls.Add(this.txtGipTalimatMiktar);
@@ -617,7 +606,6 @@
             this.Controls.Add(this.dateBitTar);
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.dateBasTar);
-            this.Controls.Add(this.kryptonDataGridView1);
             this.Controls.Add(this.btnTalimatKaydet);
             this.Controls.Add(this.txtSMF);
             this.Controls.Add(this.txtPTF);
@@ -648,7 +636,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPTF;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSMF;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnTalimatKaydet;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
         private DataGridViewTextBoxColumn talimat_id;
         private DataGridViewTextBoxColumn santralAdi;
         private DataGridViewTextBoxColumn Column1;
@@ -683,22 +670,23 @@
         private MaskedTextBox txtGipTalimatMiktar;
         private MaskedTextBox txtBlokTalimatMiktar;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnTumunuListele;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewTextBoxColumn Column9;
-        private DataGridViewTextBoxColumn Column10;
-        private DataGridViewTextBoxColumn Column11;
-        private DataGridViewTextBoxColumn Column12;
-        private DataGridViewTextBoxColumn Column13;
-        private DataGridViewTextBoxColumn Column14;
-        private DataGridViewTextBoxColumn Column15;
-        private DataGridViewTextBoxColumn Column16;
-        private DataGridViewTextBoxColumn Column17;
-        private DataGridViewTextBoxColumn Column18;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
+        private DataGridViewTextBoxColumn talimatid;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn talimatAd;
+        private DataGridViewTextBoxColumn talimatTarih;
+        private DataGridViewTextBoxColumn talimatSaat;
+        private DataGridViewTextBoxColumn birakilanTalimatMiktar;
+        private DataGridViewTextBoxColumn gelenTalimatMiktar;
+        private DataGridViewTextBoxColumn talimatFiyat;
+        private DataGridViewTextBoxColumn teslimEdilenTalimat;
+        private DataGridViewTextBoxColumn blokYapilanTalimat;
+        private DataGridViewTextBoxColumn gipYapilanTalimatMiktar;
+        private DataGridViewTextBoxColumn gipTalimatTutar;
+        private DataGridViewTextBoxColumn PTF;
+        private DataGridViewTextBoxColumn SMF;
+        private DataGridViewTextBoxColumn EAK;
+        private DataGridViewTextBoxColumn KGUP;
+        private DataGridViewTextBoxColumn guncellenenEak;
     }
 }

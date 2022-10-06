@@ -18,15 +18,15 @@ namespace Not_Defteri
             gunlukisListesi = new clsGunluk_isler();
             gunlukIsTablosu = new List<clsGunluk_isler>();
             sql = new dbOperations();
-            
+
 
             InitializeComponent();
         }
-        
+
 
         private void frmGunlukIsler_Load(object sender, EventArgs e)
         {
-                       
+
 
             gunlukIsTablosu = sql.gunlukIslerTablosu();
             dataGridView1.DataSource = gunlukIsTablosu;
@@ -35,8 +35,8 @@ namespace Not_Defteri
             date_isTarihi.DataBindings.Add("Value", gunlukisListesi, "isTarihi", true, DataSourceUpdateMode.OnPropertyChanged);
             rtxtAciklama.DataBindings.Add("Text", gunlukisListesi, "aciklama", false, DataSourceUpdateMode.OnPropertyChanged);
             chk_isDurum.DataBindings.Add("Checked", gunlukisListesi, "isTamamlandimi", true, DataSourceUpdateMode.OnPropertyChanged);
-            
-            
+
+
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -64,13 +64,13 @@ namespace Not_Defteri
             date_isTarihi.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
             chk_isDurum.Checked = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
             rtxtAciklama.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-           
+
 
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            if ( id == 0)
+            if (id == 0)
             {
                 MessageBox.Show("Lütfen Veri Seçimi Yapýnýz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -104,30 +104,31 @@ namespace Not_Defteri
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 dt.Rows.Add(row);
-                foreach(DataGridViewCell cell in row.Cells)
+                foreach (DataGridViewCell cell in row.Cells)
                 {
                     dt.Rows[dt.Rows.Count - 1][cell.ColumnIndex] = cell.Value;
                 }
-                dt.Columns.Remove("Column1");
-                string folderPath = @"..\..\Excel\";
-                string name = folderPath + "Yapilan Ýþ Listesi.xlsx";
-                if (!Directory.Exists(folderPath))
-                {
-                    Directory.CreateDirectory(folderPath);
-                }
-                using (XLWorkbook wb = new XLWorkbook())
-                {
-                    wb.Worksheets.Add(dt, "Ýþ Listesi");
-                    wb.SaveAs(name);
-
-                }
-                var p = new Process();
-                p.StartInfo = new ProcessStartInfo(name)
-                {
-                    UseShellExecute = true
-                };
-                p.Start();
             }
+            dt.Columns.Remove("Column1");
+            string folderPath = @"..\..\Excel\";
+            string name = folderPath + "Yapilan Ýþ Listesi.xlsx";
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                wb.Worksheets.Add(dt, "Ýþ Listesi");
+                wb.SaveAs(name);
+
+            }
+            var p = new Process();
+            p.StartInfo = new ProcessStartInfo(name)
+            {
+                UseShellExecute = true
+            };
+            p.Start();
         }
+
     }
 }

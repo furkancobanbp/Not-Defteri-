@@ -105,26 +105,41 @@ namespace Not_Defteri.Fonksiyonlar
         public async void talimatKayit(clsTalimatlar talimatKayit)
         {
             var sql = "insert into tblTalimatlar(santral_id, talimatYon_id, talimatTarih, talimatSaat, birakilanTalimat, talimatMiktar, " +
-                "talimatFiyat, teslimEdilenTalimat, blokYapilanTalimat, gipYapilanTalimatMiktar, gipTalimatTutar, PTF, SMF, EAK, KGÜP, guncellenenEak)" +
+                "talimatFiyat, teslimEdilenTalimat, blokYapilanTalimat, gipYapilanTalimatMiktar, gipTalimatTutar, PTF, SMF, EAK, KGUP, guncellenenEak)" +
                 " values(@santral_id, @talimatYon_id, @talimatTarih, @talimatSaat, @birakilanTalimat, @talimatMiktar, " +
-                "@talimatFiyat, @teslimEdilenTalimat, @blokYapilanTalimat, @gipYapilanTalimatMiktar, @gipTalimatTutar, @PTF, @SMF, @EAK, @KGÜP, @guncellenenEak)";
+                "@talimatFiyat, @teslimEdilenTalimat, @blokYapilanTalimat, @gipYapilanTalimatMiktar, @gipTalimatTutar, @PTF, @SMF, @EAK, @KGUP, @guncellenenEak)";
             con.Open();
             con.ExecuteAsync(sql, talimatKayit);
             con.Close();
         }
-        public List<clsTalimatBilgi> talimatTablo()
+        public List<clsTalimatBilgi> talimatTablo(String? baslangicTarihi, String? bitisTarihi, int? santralId, int? talimatYonId)
         {
+            var sqlDateQuery = "";
+            var sqlYonQuery = "";
+            var sqlSantralQuery = "";
+            if (baslangicTarihi is not null && bitisTarihi is not null)
+            {
+                sqlDateQuery = "and t.talimatTarih between '" + baslangicTarihi + "' and '" + bitisTarihi + "' ";
+            }
+            if (santralId != 0)
+            {
+                sqlSantralQuery = "and t.santral_id = " + santralId + " ";
+            }
+            if (talimatYonId != 0)
+            {
+                sqlYonQuery = "and y.talimatYon_id = " + talimatYonId + " ";
+            }
             var results = new List<clsTalimatBilgi>();
             var sql = "select t.talimat_id, s.santralAdi, y.talimatAd, t.talimatTarih, t.talimatSaat, t.birakilanTalimat, t.talimatMiktar, t.talimatFiyat, y.talimatAd, " +
-                        "t.teslimEdilenTalimat, t.blokYapilanTalimat, t.gipYapilanTalimatMiktar, t.gipTalimatTutar, t.PTF, t.SMF, t.EAK, t.KGÜP, t.guncellenenEak " +
+                        "t.teslimEdilenTalimat, t.blokYapilanTalimat, t.gipYapilanTalimatMiktar, t.gipTalimatTutar, t.PTF, t.SMF, t.EAK, t.KGUP, t.guncellenenEak " +
                         "from tblTalimatlar t, tblSantral s, tblTalimatYonu y " +
-                        "where t.talimatYon_id = y.talimatYon_id and t.santral_id = s.santral_id order by t.talimatTarih";
+                        "where t.talimatYon_id = y.talimatYon_id and t.santral_id = s.santral_id " 
+                        +sqlDateQuery + sqlYonQuery + sqlSantralQuery + "order by t.talimatTarih, t.talimatSaat";
+                        
             con.Open();
             results = con.Query<clsTalimatBilgi>(sql).ToList();
             con.Close();
             return results;
-
         }
-
     }
 }
