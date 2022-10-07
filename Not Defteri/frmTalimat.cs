@@ -21,14 +21,17 @@ namespace Not_Defteri
         public frmTalimat()
         {
             sql = new dbOperations();
-            talimatInsert = new clsTalimatlar();
+            talimatInsert = new clsTalimatlar();           
+
             InitializeComponent();
         }
+
 
         private void frmTalimat_Load(object sender, EventArgs e)
         {
             comboUevcb.DataSource = sql.santralBilgisiAl(null);
             comboTalimatTip.DataSource = sql.talimatYonBilgi();
+            comboSirket.DataSource = sql.sirketBilgisiAl();           
 
 
 
@@ -56,21 +59,22 @@ namespace Not_Defteri
         }
         private void btnTumunuListele_Click(object sender, EventArgs e)
         {
-            kryptonDataGridView1.DataSource = sql.talimatTablo(null, null, 0, 0);
+            kryptonDataGridView1.DataSource = sql.talimatTablo(null, null, 0, 0, 0);
         }
         private void btnTariheGoreAra_Click(object sender, EventArgs e)
         {
+
             String basTar = dateBasTar.Value.ToString("yyyy-MM-dd 00:00:00");
             String bitTar = dateBitTar.Value.ToString("yyyy-MM-dd 23:59:59");
-            kryptonDataGridView1.DataSource = sql.talimatTablo(basTar, bitTar, Convert.ToInt32(comboUevcb.SelectedValue), Convert.ToInt32(comboTalimatTip.SelectedValue));
+            kryptonDataGridView1.DataSource = sql.talimatTablo(basTar, bitTar, Convert.ToInt32(comboUevcb.SelectedValue), Convert.ToInt32(comboTalimatTip.SelectedValue), 0);
         }
         private void btnSantraleGoreAra_Click(object sender, EventArgs e)
         {
-            kryptonDataGridView1.DataSource = sql.talimatTablo(null, null, Convert.ToInt32(comboUevcb.SelectedValue), 0);
+            kryptonDataGridView1.DataSource = sql.talimatTablo(null, null, Convert.ToInt32(comboUevcb.SelectedValue), 0, 0);
         }
         private void btnYoneGoreAra_Click(object sender, EventArgs e)
         {
-            kryptonDataGridView1.DataSource = sql.talimatTablo(null, null, Convert.ToInt32(comboUevcb.SelectedValue), Convert.ToInt32(comboTalimatTip.SelectedValue));
+            kryptonDataGridView1.DataSource = sql.talimatTablo(null, null, Convert.ToInt32(comboUevcb.SelectedValue), Convert.ToInt32(comboTalimatTip.SelectedValue), 0);
         }
 
         private void btnExcel_Click(object sender, EventArgs e)
@@ -108,6 +112,11 @@ namespace Not_Defteri
                 UseShellExecute = true
             };
             p.Start();
+        }
+
+        private void btnSirketeGoreAra_Click(object sender, EventArgs e)
+        {
+            kryptonDataGridView1.DataSource = sql.talimatTablo(null, null, 0, 0, Convert.ToInt32(comboSirket.SelectedValue));
         }
     }
 }

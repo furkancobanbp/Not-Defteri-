@@ -111,7 +111,7 @@ namespace Not_Defteri
             }
             dt.Columns.Remove("Column1");
             string folderPath = @"..\..\Excel\";
-            string name = folderPath + "Yapilan Ýþ Listesi.xlsx";
+            string name = folderPath + "Yapilan Ýþ Listesi "+ DateTime.Now.ToString("dd / MM / yyyy") + ".xlsx";
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);

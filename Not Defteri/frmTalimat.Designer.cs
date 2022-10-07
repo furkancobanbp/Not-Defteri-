@@ -88,9 +88,12 @@
             this.EAK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KGUP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guncellenenEak = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboSirket = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.btnSirketeGoreAra = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.comboUevcb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboTalimatTip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboSirket)).BeginInit();
             this.SuspendLayout();
             // 
             // comboUevcb
@@ -227,7 +230,7 @@
             // 
             // btnTariheGoreAra
             // 
-            this.btnTariheGoreAra.Location = new System.Drawing.Point(638, 68);
+            this.btnTariheGoreAra.Location = new System.Drawing.Point(638, 70);
             this.btnTariheGoreAra.Name = "btnTariheGoreAra";
             this.btnTariheGoreAra.Size = new System.Drawing.Size(158, 29);
             this.btnTariheGoreAra.TabIndex = 21;
@@ -236,7 +239,7 @@
             // 
             // btnSantraleGoreAra
             // 
-            this.btnSantraleGoreAra.Location = new System.Drawing.Point(638, 103);
+            this.btnSantraleGoreAra.Location = new System.Drawing.Point(638, 105);
             this.btnSantraleGoreAra.Name = "btnSantraleGoreAra";
             this.btnSantraleGoreAra.Size = new System.Drawing.Size(158, 29);
             this.btnSantraleGoreAra.TabIndex = 22;
@@ -245,7 +248,7 @@
             // 
             // btnYoneGoreAra
             // 
-            this.btnYoneGoreAra.Location = new System.Drawing.Point(638, 138);
+            this.btnYoneGoreAra.Location = new System.Drawing.Point(638, 140);
             this.btnYoneGoreAra.Name = "btnYoneGoreAra";
             this.btnYoneGoreAra.Size = new System.Drawing.Size(158, 29);
             this.btnYoneGoreAra.TabIndex = 23;
@@ -254,7 +257,7 @@
             // 
             // btnExcel
             // 
-            this.btnExcel.Location = new System.Drawing.Point(638, 206);
+            this.btnExcel.Location = new System.Drawing.Point(638, 330);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(158, 29);
             this.btnExcel.TabIndex = 24;
@@ -430,7 +433,7 @@
             // 
             // btnTumunuListele
             // 
-            this.btnTumunuListele.Location = new System.Drawing.Point(638, 171);
+            this.btnTumunuListele.Location = new System.Drawing.Point(474, 330);
             this.btnTumunuListele.Name = "btnTumunuListele";
             this.btnTumunuListele.Size = new System.Drawing.Size(158, 29);
             this.btnTumunuListele.TabIndex = 61;
@@ -569,11 +572,33 @@
             this.guncellenenEak.HeaderText = "Güncellenen EAK";
             this.guncellenenEak.Name = "guncellenenEak";
             // 
+            // comboSirket
+            // 
+            this.comboSirket.DisplayMember = "sirketAdi";
+            this.comboSirket.DropDownWidth = 158;
+            this.comboSirket.Location = new System.Drawing.Point(638, 175);
+            this.comboSirket.Name = "comboSirket";
+            this.comboSirket.Size = new System.Drawing.Size(158, 21);
+            this.comboSirket.TabIndex = 63;
+            this.comboSirket.Text = "Şirket";
+            this.comboSirket.ValueMember = "sirket_id";
+            // 
+            // btnSirketeGoreAra
+            // 
+            this.btnSirketeGoreAra.Location = new System.Drawing.Point(638, 202);
+            this.btnSirketeGoreAra.Name = "btnSirketeGoreAra";
+            this.btnSirketeGoreAra.Size = new System.Drawing.Size(158, 29);
+            this.btnSirketeGoreAra.TabIndex = 64;
+            this.btnSirketeGoreAra.Values.Text = "Şirkete Göre Ara";
+            this.btnSirketeGoreAra.Click += new System.EventHandler(this.btnSirketeGoreAra_Click);
+            // 
             // frmTalimat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 625);
+            this.Controls.Add(this.btnSirketeGoreAra);
+            this.Controls.Add(this.comboSirket);
             this.Controls.Add(this.kryptonDataGridView1);
             this.Controls.Add(this.btnTumunuListele);
             this.Controls.Add(this.txtGipTalimatTutar);
@@ -621,6 +646,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboUevcb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboTalimatTip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboSirket)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -688,5 +714,7 @@
         private DataGridViewTextBoxColumn EAK;
         private DataGridViewTextBoxColumn KGUP;
         private DataGridViewTextBoxColumn guncellenenEak;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboSirket;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSirketeGoreAra;
     }
 }

@@ -112,11 +112,13 @@ namespace Not_Defteri.Fonksiyonlar
             con.ExecuteAsync(sql, talimatKayit);
             con.Close();
         }
-        public List<clsTalimatBilgi> talimatTablo(String? baslangicTarihi, String? bitisTarihi, int? santralId, int? talimatYonId)
+        public List<clsTalimatBilgi> talimatTablo(String? baslangicTarihi, String? bitisTarihi, int? santralId, int? talimatYonId, int sirketId)
         {
             var sqlDateQuery = "";
             var sqlYonQuery = "";
             var sqlSantralQuery = "";
+            var sqlSirketQuery = "";
+            var tblSirket = "";
             if (baslangicTarihi is not null && bitisTarihi is not null)
             {
                 sqlDateQuery = "and t.talimatTarih between '" + baslangicTarihi + "' and '" + bitisTarihi + "' ";
@@ -129,12 +131,18 @@ namespace Not_Defteri.Fonksiyonlar
             {
                 sqlYonQuery = "and y.talimatYon_id = " + talimatYonId + " ";
             }
+            if (sirketId != 0)
+            {
+                tblSirket = ",tblSirket c ";
+                sqlSirketQuery = " and c.sirket_id = s.sirket_id and c.sirket_id = " + sirketId + " ";
+            }
             var results = new List<clsTalimatBilgi>();
             var sql = "select t.talimat_id, s.santralAdi, y.talimatAd, t.talimatTarih, t.talimatSaat, t.birakilanTalimat, t.talimatMiktar, t.talimatFiyat, y.talimatAd, " +
                         "t.teslimEdilenTalimat, t.blokYapilanTalimat, t.gipYapilanTalimatMiktar, t.gipTalimatTutar, t.PTF, t.SMF, t.EAK, t.KGUP, t.guncellenenEak " +
-                        "from tblTalimatlar t, tblSantral s, tblTalimatYonu y " +
+                        "from tblTalimatlar t, tblSantral s, tblTalimatYonu y " +tblSirket+
                         "where t.talimatYon_id = y.talimatYon_id and t.santral_id = s.santral_id " 
-                        +sqlDateQuery + sqlYonQuery + sqlSantralQuery + "order by t.talimatTarih, t.talimatSaat";
+                        +sqlDateQuery + sqlYonQuery + sqlSantralQuery + sqlSirketQuery + 
+                        "order by t.talimatTarih, t.talimatSaat";
                         
             con.Open();
             results = con.Query<clsTalimatBilgi>(sql).ToList();
