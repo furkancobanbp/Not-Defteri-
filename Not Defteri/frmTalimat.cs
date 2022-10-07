@@ -112,7 +112,10 @@ namespace Not_Defteri
         }
         private void btnSirketeGoreAra_Click(object sender, EventArgs e)
         {
-            kryptonDataGridView1.DataSource = sql.talimatTablo(null, null, 0, 0, Convert.ToInt32(comboSirket.SelectedValue));
+            String basTar = dateBasTar.Value.ToString("yyyy-MM-dd 00:00:00");
+            String bitTar = dateBitTar.Value.ToString("yyyy-MM-dd 23:59:59");
+
+            kryptonDataGridView1.DataSource = sql.talimatTablo(basTar, bitTar, 0, 0, Convert.ToInt32(comboSirket.SelectedValue));
         }
     }
 }

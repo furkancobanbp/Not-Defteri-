@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboUevcb = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.comboTalimatTip = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.dateTalimatTarihi = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
@@ -201,7 +201,7 @@
             this.dateBasTar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateBasTar.Location = new System.Drawing.Point(638, 15);
             this.dateBasTar.Name = "dateBasTar";
-            this.dateBasTar.Size = new System.Drawing.Size(158, 21);
+            this.dateBasTar.Size = new System.Drawing.Size(174, 21);
             this.dateBasTar.TabIndex = 17;
             // 
             // kryptonLabel2
@@ -226,39 +226,39 @@
             this.dateBitTar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateBitTar.Location = new System.Drawing.Point(638, 43);
             this.dateBitTar.Name = "dateBitTar";
-            this.dateBitTar.Size = new System.Drawing.Size(158, 21);
+            this.dateBitTar.Size = new System.Drawing.Size(174, 21);
             this.dateBitTar.TabIndex = 19;
             // 
             // btnTariheGoreAra
             // 
             this.btnTariheGoreAra.Location = new System.Drawing.Point(638, 70);
             this.btnTariheGoreAra.Name = "btnTariheGoreAra";
-            this.btnTariheGoreAra.Size = new System.Drawing.Size(158, 29);
+            this.btnTariheGoreAra.Size = new System.Drawing.Size(174, 29);
             this.btnTariheGoreAra.TabIndex = 21;
             this.btnTariheGoreAra.Values.Text = "Tarihe Göre Ara";
             this.btnTariheGoreAra.Click += new System.EventHandler(this.btnTariheGoreAra_Click);
             // 
             // btnSantraleGoreAra
             // 
-            this.btnSantraleGoreAra.Location = new System.Drawing.Point(638, 105);
+            this.btnSantraleGoreAra.Location = new System.Drawing.Point(638, 168);
             this.btnSantraleGoreAra.Name = "btnSantraleGoreAra";
-            this.btnSantraleGoreAra.Size = new System.Drawing.Size(158, 29);
+            this.btnSantraleGoreAra.Size = new System.Drawing.Size(174, 29);
             this.btnSantraleGoreAra.TabIndex = 22;
             this.btnSantraleGoreAra.Values.Text = "Santrale Göre Ara";
             this.btnSantraleGoreAra.Click += new System.EventHandler(this.btnSantraleGoreAra_Click);
             // 
             // btnYoneGoreAra
             // 
-            this.btnYoneGoreAra.Location = new System.Drawing.Point(638, 140);
+            this.btnYoneGoreAra.Location = new System.Drawing.Point(638, 203);
             this.btnYoneGoreAra.Name = "btnYoneGoreAra";
-            this.btnYoneGoreAra.Size = new System.Drawing.Size(158, 29);
+            this.btnYoneGoreAra.Size = new System.Drawing.Size(174, 29);
             this.btnYoneGoreAra.TabIndex = 23;
             this.btnYoneGoreAra.Values.Text = "Talimat Yönüne Göre Ara";
             this.btnYoneGoreAra.Click += new System.EventHandler(this.btnYoneGoreAra_Click);
             // 
             // btnExcel
             // 
-            this.btnExcel.Location = new System.Drawing.Point(638, 330);
+            this.btnExcel.Location = new System.Drawing.Point(654, 330);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(158, 29);
             this.btnExcel.TabIndex = 24;
@@ -434,7 +434,7 @@
             // 
             // btnTumunuListele
             // 
-            this.btnTumunuListele.Location = new System.Drawing.Point(474, 330);
+            this.btnTumunuListele.Location = new System.Drawing.Point(490, 330);
             this.btnTumunuListele.Name = "btnTumunuListele";
             this.btnTumunuListele.Size = new System.Drawing.Size(158, 29);
             this.btnTumunuListele.TabIndex = 61;
@@ -464,10 +464,10 @@
             this.KGUP,
             this.guncellenenEak});
             this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 365);
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 370);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.RowTemplate.Height = 25;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(818, 260);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(851, 260);
             this.kryptonDataGridView1.TabIndex = 62;
             // 
             // talimatid
@@ -492,8 +492,8 @@
             // talimatTarih
             // 
             this.talimatTarih.DataPropertyName = "talimatTarih";
-            dataGridViewCellStyle1.Format = "dd.MM.yyyy";
-            this.talimatTarih.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "dd.MM.yyyy";
+            this.talimatTarih.DefaultCellStyle = dataGridViewCellStyle2;
             this.talimatTarih.HeaderText = "Talimat Tarihi";
             this.talimatTarih.Name = "talimatTarih";
             // 
@@ -579,27 +579,27 @@
             // 
             this.comboSirket.DisplayMember = "sirketAdi";
             this.comboSirket.DropDownWidth = 158;
-            this.comboSirket.Location = new System.Drawing.Point(638, 175);
+            this.comboSirket.Location = new System.Drawing.Point(638, 105);
             this.comboSirket.Name = "comboSirket";
-            this.comboSirket.Size = new System.Drawing.Size(158, 21);
+            this.comboSirket.Size = new System.Drawing.Size(174, 21);
             this.comboSirket.TabIndex = 63;
             this.comboSirket.Text = "Şirket";
             this.comboSirket.ValueMember = "sirket_id";
             // 
             // btnSirketeGoreAra
             // 
-            this.btnSirketeGoreAra.Location = new System.Drawing.Point(638, 202);
+            this.btnSirketeGoreAra.Location = new System.Drawing.Point(638, 132);
             this.btnSirketeGoreAra.Name = "btnSirketeGoreAra";
-            this.btnSirketeGoreAra.Size = new System.Drawing.Size(158, 29);
+            this.btnSirketeGoreAra.Size = new System.Drawing.Size(174, 30);
             this.btnSirketeGoreAra.TabIndex = 64;
-            this.btnSirketeGoreAra.Values.Text = "Şirkete Göre Ara";
+            this.btnSirketeGoreAra.Values.Text = "İki Tarih Arası Şirkete Göre Ara";
             this.btnSirketeGoreAra.Click += new System.EventHandler(this.btnSirketeGoreAra_Click);
             // 
             // frmTalimat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 625);
+            this.ClientSize = new System.Drawing.Size(851, 630);
             this.Controls.Add(this.btnSirketeGoreAra);
             this.Controls.Add(this.comboSirket);
             this.Controls.Add(this.kryptonDataGridView1);
