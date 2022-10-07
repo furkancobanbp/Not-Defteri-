@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboUevcb = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.comboTalimatTip = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.dateTalimatTarihi = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
@@ -128,7 +129,7 @@
             this.dateTalimatTarihi.Name = "dateTalimatTarihi";
             this.dateTalimatTarihi.Size = new System.Drawing.Size(158, 21);
             this.dateTalimatTarihi.TabIndex = 2;
-            this.dateTalimatTarihi.ValueNullable = new System.DateTime(2022, 9, 30, 15, 53, 5, 0);
+            this.dateTalimatTarihi.ValueNullable = new System.DateTime(2022, 10, 7, 14, 54, 41, 0);
             // 
             // numSaat
             // 
@@ -491,6 +492,8 @@
             // talimatTarih
             // 
             this.talimatTarih.DataPropertyName = "talimatTarih";
+            dataGridViewCellStyle1.Format = "dd.MM.yyyy";
+            this.talimatTarih.DefaultCellStyle = dataGridViewCellStyle1;
             this.talimatTarih.HeaderText = "Talimat Tarihi";
             this.talimatTarih.Name = "talimatTarih";
             // 
@@ -697,6 +700,8 @@
         private MaskedTextBox txtBlokTalimatMiktar;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnTumunuListele;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboSirket;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSirketeGoreAra;
         private DataGridViewTextBoxColumn talimatid;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn talimatAd;
@@ -714,7 +719,5 @@
         private DataGridViewTextBoxColumn EAK;
         private DataGridViewTextBoxColumn KGUP;
         private DataGridViewTextBoxColumn guncellenenEak;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboSirket;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSirketeGoreAra;
     }
 }

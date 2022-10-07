@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,20 +26,17 @@ namespace Not_Defteri
 
             InitializeComponent();
         }
-
-
         private void frmTalimat_Load(object sender, EventArgs e)
         {
+            
             comboUevcb.DataSource = sql.santralBilgisiAl(null);
             comboTalimatTip.DataSource = sql.talimatYonBilgi();
-            comboSirket.DataSource = sql.sirketBilgisiAl();           
-
-
+            comboSirket.DataSource = sql.sirketBilgisiAl();
 
             comboUevcb.DataBindings.Add("SelectedValue", talimatInsert, "santral_id", true, DataSourceUpdateMode.OnPropertyChanged);
             comboTalimatTip.DataBindings.Add("SelectedValue", talimatInsert, "talimatYon_id", true, DataSourceUpdateMode.OnPropertyChanged);
             numSaat.DataBindings.Add("Value", talimatInsert, "talimatSaat", true, DataSourceUpdateMode.OnPropertyChanged);
-            dateTalimatTarihi.DataBindings.Add("Value", talimatInsert, "talimatTarih", true, DataSourceUpdateMode.OnPropertyChanged);
+            dateTalimatTarihi.DataBindings.Add("Value", talimatInsert, "talimatTarih", true, DataSourceUpdateMode.OnValidation);
             txtBirakilanTalimatMiktar.DataBindings.Add("Text", talimatInsert, "birakilanTalimat", true, DataSourceUpdateMode.OnPropertyChanged);
             txtGelenTalimatMiktar.DataBindings.Add("Text", talimatInsert, "talimatMiktar", true, DataSourceUpdateMode.OnPropertyChanged);
             txtTalimatFiyat.DataBindings.Add("Text", talimatInsert, "talimatFiyat", true, DataSourceUpdateMode.OnPropertyChanged);
@@ -76,7 +74,6 @@ namespace Not_Defteri
         {
             kryptonDataGridView1.DataSource = sql.talimatTablo(null, null, Convert.ToInt32(comboUevcb.SelectedValue), Convert.ToInt32(comboTalimatTip.SelectedValue), 0);
         }
-
         private void btnExcel_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
@@ -113,7 +110,6 @@ namespace Not_Defteri
             };
             p.Start();
         }
-
         private void btnSirketeGoreAra_Click(object sender, EventArgs e)
         {
             kryptonDataGridView1.DataSource = sql.talimatTablo(null, null, 0, 0, Convert.ToInt32(comboSirket.SelectedValue));
