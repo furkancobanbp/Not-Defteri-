@@ -1,17 +1,8 @@
 ﻿using ClosedXML.Excel;
 using Not_Defteri.Fonksiyonlar;
 using Not_Defteri.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Not_Defteri
 {

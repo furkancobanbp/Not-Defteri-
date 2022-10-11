@@ -23,4 +23,10 @@ namespace Not_Defteri.Model
         public String talimatAd { get; set; }
         public int talimatKod { get; set; }
     }
+    public class clsTip
+    {
+        public int id { get; set; }
+        public String ad { get; set; }
+
+    }
 }
