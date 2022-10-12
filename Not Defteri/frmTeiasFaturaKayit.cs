@@ -51,7 +51,7 @@ namespace Not_Defteri
             String basTar = dateFaturaDonem.Value.ToString("yyyy-MM-dd 00:00:00");
             String bitTar = dateFaturaDonem.Value.ToString("yyyy-MM-dd 23:59:59");
 
-            dataGridView1.DataSource = sql.faturaTabloSource(false, 0, 0, basTar, bitTar, 0);
+            dataGridView1.DataSource = sql.faturaTabloSource(0, 0, basTar, bitTar, 0);
         }
         private void btnSirketeGoreAra_Click(object sender, EventArgs e)
         {
@@ -59,7 +59,7 @@ namespace Not_Defteri
             String bitTar = dateFaturaDonem.Value.ToString("yyyy-MM-dd 23:59:59");
             int sirketId = Convert.ToInt32(comboSirket.SelectedValue);
 
-            dataGridView1.DataSource = sql.faturaTabloSource(false, sirketId, 0, basTar, bitTar, 0);
+            dataGridView1.DataSource = sql.faturaTabloSource(sirketId, 0, basTar, bitTar, 0);
         }
         private void btnSantraleGoreAra_Click(object sender, EventArgs e)
         {
@@ -67,7 +67,7 @@ namespace Not_Defteri
             String bitTar = dateFaturaDonem.Value.ToString("yyyy-MM-dd 23:59:59");
             int santralId = Convert.ToInt32(comboSantral.SelectedValue);
 
-            dataGridView1.DataSource = sql.faturaTabloSource(false, 0, santralId, basTar, bitTar, 0);
+            dataGridView1.DataSource = sql.faturaTabloSource(0, santralId, basTar, bitTar, 0);
         }
         private void btnTipeGore_Click(object sender, EventArgs e)
         {
@@ -75,7 +75,7 @@ namespace Not_Defteri
             String bitTar = dateFaturaDonem.Value.ToString("yyyy-MM-dd 23:59:59");
             int faturaTip = Convert.ToInt32(comboTip.SelectedValue);
 
-            dataGridView1.DataSource = sql.faturaTabloSource(false, 0, 0, basTar, bitTar, faturaTip);
+            dataGridView1.DataSource = sql.faturaTabloSource(0, 0, basTar, bitTar, faturaTip);
         }
 
         private void btnExcel_Click(object sender, EventArgs e)
@@ -117,7 +117,7 @@ namespace Not_Defteri
 
         private void btnTumList_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = sql.faturaTabloSource(false, 0, 0, null, null, 0);
+            dataGridView1.DataSource = sql.faturaTabloSource(0, 0, null, null, 0);
         }
 
         private void btnDonemToplam_Click(object sender, EventArgs e)
@@ -125,10 +125,9 @@ namespace Not_Defteri
             String basTar = dateFaturaDonem.Value.ToString("yyyy-MM-dd 00:00:00");
             String bitTar = dateFaturaDonem.Value.ToString("yyyy-MM-dd 23:59:59");
 
-            int sirketId = Convert.ToInt32(comboSirket.SelectedValue);
-            int santralId = Convert.ToInt32(comboSantral.SelectedValue);
+            int sirketId = Convert.ToInt32(comboSirket.SelectedValue);           
 
-            dataGridView2.DataSource = sql.faturaTabloSource(true, sirketId, santralId, basTar, bitTar, 0);
+            dataGridView2.DataSource = sql.toplamTabloSource(basTar, bitTar, sirketId);
         }
     }
 }

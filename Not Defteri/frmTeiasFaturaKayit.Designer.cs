@@ -67,6 +67,11 @@
             this.btnTumList = new System.Windows.Forms.Button();
             this.btnDonemToplam = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -149,28 +154,28 @@
             // 
             // txtMalHizmet
             // 
-            this.txtMalHizmet.Location = new System.Drawing.Point(415, 12);
+            this.txtMalHizmet.Location = new System.Drawing.Point(470, 12);
             this.txtMalHizmet.Name = "txtMalHizmet";
             this.txtMalHizmet.Size = new System.Drawing.Size(151, 23);
             this.txtMalHizmet.TabIndex = 8;
             // 
             // txtIskonto
             // 
-            this.txtIskonto.Location = new System.Drawing.Point(415, 41);
+            this.txtIskonto.Location = new System.Drawing.Point(470, 41);
             this.txtIskonto.Name = "txtIskonto";
             this.txtIskonto.Size = new System.Drawing.Size(151, 23);
             this.txtIskonto.TabIndex = 9;
             // 
             // txtKDV
             // 
-            this.txtKDV.Location = new System.Drawing.Point(415, 70);
+            this.txtKDV.Location = new System.Drawing.Point(470, 70);
             this.txtKDV.Name = "txtKDV";
             this.txtKDV.Size = new System.Drawing.Size(151, 23);
             this.txtKDV.TabIndex = 10;
             // 
             // txtToplamTutar
             // 
-            this.txtToplamTutar.Location = new System.Drawing.Point(415, 99);
+            this.txtToplamTutar.Location = new System.Drawing.Point(470, 99);
             this.txtToplamTutar.Name = "txtToplamTutar";
             this.txtToplamTutar.Size = new System.Drawing.Size(151, 23);
             this.txtToplamTutar.TabIndex = 11;
@@ -178,7 +183,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(260, 15);
+            this.label5.Location = new System.Drawing.Point(315, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 15);
             this.label5.TabIndex = 12;
@@ -187,7 +192,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(327, 44);
+            this.label6.Location = new System.Drawing.Point(382, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 15);
             this.label6.TabIndex = 13;
@@ -196,7 +201,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(377, 73);
+            this.label7.Location = new System.Drawing.Point(432, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 15);
             this.label7.TabIndex = 14;
@@ -205,7 +210,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(330, 102);
+            this.label8.Location = new System.Drawing.Point(385, 102);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 15);
             this.label8.TabIndex = 15;
@@ -213,7 +218,7 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(415, 157);
+            this.btnKaydet.Location = new System.Drawing.Point(470, 157);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(151, 23);
             this.btnKaydet.TabIndex = 16;
@@ -223,6 +228,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
@@ -242,12 +248,12 @@
             this.Column8,
             this.Column9});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 308);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 331);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(673, 233);
+            this.dataGridView1.Size = new System.Drawing.Size(822, 210);
             this.dataGridView1.TabIndex = 17;
             // 
             // Column1
@@ -356,7 +362,7 @@
             // 
             // txtKDVDahil
             // 
-            this.txtKDVDahil.Location = new System.Drawing.Point(415, 128);
+            this.txtKDVDahil.Location = new System.Drawing.Point(470, 128);
             this.txtKDVDahil.Name = "txtKDVDahil";
             this.txtKDVDahil.Size = new System.Drawing.Size(151, 23);
             this.txtKDVDahil.TabIndex = 21;
@@ -364,7 +370,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(316, 131);
+            this.label9.Location = new System.Drawing.Point(371, 131);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 15);
             this.label9.TabIndex = 22;
@@ -402,7 +408,7 @@
             // 
             // btnDonemToplam
             // 
-            this.btnDonemToplam.Location = new System.Drawing.Point(415, 186);
+            this.btnDonemToplam.Location = new System.Drawing.Point(659, 157);
             this.btnDonemToplam.Name = "btnDonemToplam";
             this.btnDonemToplam.Size = new System.Drawing.Size(151, 23);
             this.btnDonemToplam.TabIndex = 26;
@@ -412,21 +418,65 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(260, 215);
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15});
+            this.dataGridView2.Location = new System.Drawing.Point(260, 186);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(413, 87);
+            this.dataGridView2.Size = new System.Drawing.Size(562, 139);
             this.dataGridView2.TabIndex = 27;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "malHizmetiToplamTutar";
+            this.Column11.HeaderText = "Mal Hizmeti Toplam Tutar";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "iskonto";
+            this.Column12.HeaderText = "İskonto";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "KDV";
+            this.Column13.HeaderText = "KDV";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "toplamTutar";
+            this.Column14.HeaderText = "Toplam Tutar";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "kdvDahilToplamTutar";
+            this.Column15.HeaderText = "Vergiler Dahil Toplam Tutar";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
             // 
             // frmTeiasFaturaKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 541);
+            this.ClientSize = new System.Drawing.Size(822, 541);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.btnDonemToplam);
             this.Controls.Add(this.btnTumList);
@@ -509,5 +559,10 @@
         private Button btnTumList;
         private Button btnDonemToplam;
         private DataGridView dataGridView2;
+        private DataGridViewTextBoxColumn Column11;
+        private DataGridViewTextBoxColumn Column12;
+        private DataGridViewTextBoxColumn Column13;
+        private DataGridViewTextBoxColumn Column14;
+        private DataGridViewTextBoxColumn Column15;
     }
 }

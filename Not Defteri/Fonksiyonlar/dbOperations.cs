@@ -177,15 +177,12 @@ namespace Not_Defteri.Fonksiyonlar
             con.ExecuteAsync(sql, faturaInsert);
             con.Close();
         }
-        public List<clsTeiasBilgi> faturaTabloSource(bool sumSituation, int sirketId, int santralId, String basDonem, String bitDonem, int faturaTip)
+        public List<clsTeiasBilgi> faturaTabloSource(int sirketId, int santralId, String basDonem, String bitDonem, int faturaTip)
         {
             var sirketQuery = "";
             var santralQuery = "";
             var faturaQuery = "";
             var tarihQuery = " and t.faturaDonem between '" + basDonem + "' and '" + bitDonem + "' ";
-            var selectQuery = "t.fatura_id, t.faturaDonem, f.faturaTipi, s.sirketAdi, u.santralAdi, " +
-                              "t.malHizmetiToplamTutar, t.iskonto, t.KDV, t.toplamTutar, t.kdvDahilToplamTutar ";
-            var orderByQuery = " order by t.faturaDonem DESC, f.faturaTipi DESC ";
 
             if (sirketId != 0)
             {
@@ -203,22 +200,31 @@ namespace Not_Defteri.Fonksiyonlar
             {
                 tarihQuery = "";
             }
-            if (sumSituation is true)
-            {
-                selectQuery = "f.faturaTipi, SUM(t.malHizmetiToplamTutar), " +
-                    "SUM(t.iskonto), SUM(t.KDV), SUM(t.toplamTutar), SUM(t.kdvDahilToplamTutar)";
-                faturaQuery = "";
-                orderByQuery = "";
-            }
 
-            var sql = "select " + selectQuery +
+            var sql = "select t.fatura_id, t.faturaDonem, f.faturaTipi, s.sirketAdi, u.santralAdi, " +
+                     "t.malHizmetiToplamTutar, t.iskonto, t.KDV, t.toplamTutar, t.kdvDahilToplamTutar " +
                     " from tblTeiasFatura t, tblSirket s, tblTeiasFaturaTip f, tblTeiasSantral u " +
                     "where t.sirket_id = s.sirket_id and s.sirket_id = u.sirket_id and t.tip_id = f.tip_id and t.santral_id = u.santral_id " +
-                    sirketQuery + santralQuery + faturaQuery + tarihQuery + orderByQuery;
+                    sirketQuery + santralQuery + faturaQuery + tarihQuery + " order by t.faturaDonem DESC, f.faturaTipi DESC ";
 
             var results = new List<clsTeiasBilgi>();
             con.Open();
             results = con.Query<clsTeiasBilgi>(sql).ToList();
+            con.Close();
+            return results;
+        }
+        public List<clsTeiasToplamBilgi> toplamTabloSource(String basTar, String bitTar, int sirketId)
+        {
+            var results = new List<clsTeiasToplamBilgi>();
+            var sql = "select SUM(t.malHizmetiToplamTutar) malHizmetiToplamTutar, SUM(t.iskonto) iskonto, " +
+                "SUM(t.KDV) KDV, SUM(t.toplamTutar) toplamTutar, SUM(t.kdvDahilToplamTutar) kdvDahilToplamTutar " +
+                     "from tblTeiasFatura t, tblSirket s " +
+                     "where t.sirket_id = s.sirket_id " +
+                     " and t.sirket_id = "+sirketId+"  and t.faturaDonem " +
+                     "between '" + basTar + "' and '" + bitTar + "' ";
+
+            con.Open();
+            results = con.Query<clsTeiasToplamBilgi>(sql).ToList();
             con.Close();
             return results;
         }

@@ -25,6 +25,13 @@
         public decimal KDV { get; set; }
         public decimal toplamTutar { get; set; }
         public decimal kdvDahilToplamTutar { get; set; }
-
+    }
+    public class clsTeiasToplamBilgi
+    {
+        public decimal malHizmetiToplamTutar { get; set; }
+        public decimal iskonto { get; set; }
+        public decimal KDV { get; set; }
+        public decimal toplamTutar { get; set; }
+        public decimal kdvDahilToplamTutar { get; set; }
     }
 }
