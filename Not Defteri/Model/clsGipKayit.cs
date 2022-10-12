@@ -9,8 +9,8 @@ namespace Not_Defteri.Model
 {
     public class clsGipKayit
     {
-        [Key]
-        public int gip_id { get; set; } 
+
+        public int gip_id { get; set; }
         public int sirket_id { get; set; }
         public int santral_id { get; set; }
         public String aksaAciklama { get; set; }

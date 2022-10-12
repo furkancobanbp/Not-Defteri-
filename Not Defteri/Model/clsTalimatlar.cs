@@ -13,10 +13,10 @@ namespace Not_Defteri.Model
         public int talimatYon_id { get; set; }
         public DateTime? talimatTarih { get; set; }
         public int talimatSaat { get; set; }
-        public decimal birakilanTalimat { get; set; }       
+        public decimal birakilanTalimat { get; set; }
         public decimal talimatMiktar { get; set; }
         public decimal talimatFiyat { get; set; }
-        public decimal teslimEdilenTalimat { get; set; }    
+        public decimal teslimEdilenTalimat { get; set; }
         public decimal blokYapilanTalimat { get; set; }
         public decimal gipYapilanTalimatMiktar { get; set; }
         public decimal gipTalimatTutar { get; set; }

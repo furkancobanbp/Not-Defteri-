@@ -23,7 +23,7 @@ namespace Not_Defteri
             comboTip.DataSource = sql.faturaTipBilgiAl();
 
             comboSirket.SelectedValue = -1;
-            
+
 
             comboSirket.DataBindings.Add("SelectedValue", teiasFatura, "sirket_id", true, DataSourceUpdateMode.OnPropertyChanged);
             comboSantral.DataBindings.Add("SelectedValue", teiasFatura, "santral_id", true, DataSourceUpdateMode.OnPropertyChanged);
@@ -125,7 +125,7 @@ namespace Not_Defteri
             String basTar = dateFaturaDonem.Value.ToString("yyyy-MM-dd 00:00:00");
             String bitTar = dateFaturaDonem.Value.ToString("yyyy-MM-dd 23:59:59");
 
-            int sirketId = Convert.ToInt32(comboSirket.SelectedValue);           
+            int sirketId = Convert.ToInt32(comboSirket.SelectedValue);
 
             dataGridView2.DataSource = sql.toplamTabloSource(basTar, bitTar, sirketId);
         }

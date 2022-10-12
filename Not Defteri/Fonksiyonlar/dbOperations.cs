@@ -220,7 +220,7 @@ namespace Not_Defteri.Fonksiyonlar
                 "SUM(t.KDV) KDV, SUM(t.toplamTutar) toplamTutar, SUM(t.kdvDahilToplamTutar) kdvDahilToplamTutar " +
                      "from tblTeiasFatura t, tblSirket s " +
                      "where t.sirket_id = s.sirket_id " +
-                     " and t.sirket_id = "+sirketId+"  and t.faturaDonem " +
+                     " and t.sirket_id = " + sirketId + "  and t.faturaDonem " +
                      "between '" + basTar + "' and '" + bitTar + "' ";
 
             con.Open();
